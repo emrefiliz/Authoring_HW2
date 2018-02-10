@@ -1,6 +1,7 @@
 (function() {
+  // Get current time
   var time = new Date();
-
+  // Capitalize function
   function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -15,8 +16,8 @@
 
   function setNickname() {
     nickName = this.value;
-    $('#nickname-container').hide();
-    $('#chat-container').show();
+    $('#nickname-container').hide("slow");
+    $('#chat-container').show("slow");
     socket.emit('chat message', capitalize(nickName) + ' has joined the channel.');
   }
 
