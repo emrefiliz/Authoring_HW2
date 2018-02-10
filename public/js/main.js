@@ -24,7 +24,7 @@
   function handleSendMessage(e) {
     e.preventDefault(); // kill form submit
     nickName = (nickName && nickName.length > 0) ? nickName : 'user';
-    msg = `<p id="nicknameArea">${capitalize(nickName)} <small>${time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</small></p><p id="messageArea">${chatMessage.value}</p>`;
+    msg = `<p id="nicknameArea">${capitalize(nickName)} <a id="time">${time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</a></p><p id="messageArea">${chatMessage.value}</p>`;
 
     socket.emit('chat message', msg);
     chatMessage.value = '';
