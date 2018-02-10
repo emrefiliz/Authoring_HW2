@@ -1,0 +1,102 @@
+/* reset */
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans:400italic,700italic,400,700); // Font Variables
+$roboto-slab: 'Ropa Sans', serif; // Theme Variables
+$background-color: #111111;
+$message-color: lime;
+$alternate-background-color: #222222;
+$button-color: #333333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 13px Helvetica, Arial;
+  background-color: $background-color;
+}
+
+#nickname-container {
+  background-color: $background-color;
+  color: $message-color;
+  font-weight: 100;
+
+  .form {
+    height: 100px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+
+    .nickname {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $message-color;
+      outline: none;
+      padding-bottom: 15px;
+      text-align: center;
+      width: 400px;
+      font-size: 200%;
+      letter-spacing: 3px;
+      color: $message-color;
+    }
+  }
+
+  .title {
+    font-size: 200%;
+  }
+}
+
+#chat-container {
+  display: none;
+  margin-left: 25%;
+  width: 50%;
+
+  form {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+
+    input {
+      border: 2px solid $message-color;
+      background: $background-color;
+      color: $message-color;
+      padding: 10px 0 10px 10px;
+      width: 75%;
+    }
+
+    button {
+      font-family: $roboto-slab;
+      border: 2px solid $message-color;
+      text-transform: uppercase;
+      background: $button-color;
+      color: $message-color;
+      width: 20%;
+      padding: 10px 0;      
+    }
+  }
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-family: $roboto-slab;
+    color: $message-color;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  li:nth-child(odd) {
+    background: $alternate-background-color;
+  }
+}
+
+#nicknameArea {
+  font-weight: 700;
+}
